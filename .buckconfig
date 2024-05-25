@@ -1,0 +1,14 @@
+[repositories]
+cat4progs = .
+prelude = prelude
+toolchains = toolchains
+none = none
+
+[repository_aliases]
+config = prelude
+fbcode = none
+fbsource = none
+buck = none
+
+[parser]
+target_platform_detector_spec = target:cat4progs//...->prelude//platforms:default
