@@ -1,0 +1,67 @@
+#!/usr/bin/env dotslash
+
+{
+  "name": "buck2",
+  "platforms": {
+    "macos-aarch64": {
+      "size": 24152727,
+      "hash": "blake3",
+      "digest": "afece342c719d1b416912c7dfe1965338e117c73e77dddf6e2b12be242bcc531",
+      "format": "zst",
+      "path": "buck2-aarch64-apple-darwin",
+      "providers": [
+        {
+          "url": "https://github.com/facebook/buck2/releases/download/2024-05-15/buck2-aarch64-apple-darwin.zst"
+        }
+      ]
+    },
+    "linux-aarch64": {
+      "size": 26459387,
+      "hash": "blake3",
+      "digest": "4bca7273388ca01a27f958a99aa012e8c6fb33dbcaac0f6f5720aaedf350519d",
+      "format": "zst",
+      "path": "buck2-aarch64-unknown-linux-musl",
+      "providers": [
+        {
+          "url": "https://github.com/facebook/buck2/releases/download/2024-05-15/buck2-aarch64-unknown-linux-musl.zst"
+        }
+      ]
+    },
+    "macos-x86_64": {
+      "size": 26175172,
+      "hash": "blake3",
+      "digest": "0bf715d563002f41c691b200fc9a199cc8a7d6044c7928d709a814a61d29c0d4",
+      "format": "zst",
+      "path": "buck2-x86_64-apple-darwin",
+      "providers": [
+        {
+          "url": "https://github.com/facebook/buck2/releases/download/2024-05-15/buck2-x86_64-apple-darwin.zst"
+        }
+      ]
+    },
+    "windows-x86_64": {
+      "size": 21648159,
+      "hash": "blake3",
+      "digest": "ca43514938387e11096d2835db50562da6dec6c4edea0e8a0f4dbc64f8369611",
+      "format": "zst",
+      "path": "buck2-x86_64-pc-windows-msvc.exe",
+      "providers": [
+        {
+          "url": "https://github.com/facebook/buck2/releases/download/2024-05-15/buck2-x86_64-pc-windows-msvc.exe.zst"
+        }
+      ]
+    },
+    "linux-x86_64": {
+      "size": 27549268,
+      "hash": "blake3",
+      "digest": "cece035aeffd361f8c19416183af245a408cd723ef1c656ba2b64cae2c0072fa",
+      "format": "zst",
+      "path": "buck2-x86_64-unknown-linux-musl",
+      "providers": [
+        {
+          "url": "https://github.com/facebook/buck2/releases/download/2024-05-15/buck2-x86_64-unknown-linux-musl.zst"
+        }
+      ]
+    }
+  }
+}

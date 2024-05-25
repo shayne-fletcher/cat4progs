@@ -1,0 +1,31 @@
+name: buck2 build/run
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+jobs:
+  buck-build-and-test:
+    name: ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu, macos]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: 'true'
+      - uses: facebook/install-dotslash@latest
+      - run: sudo apt-get update && sudo apt-get install opam libzstd-dev
+        if: matrix.os == 'ubuntu'
+      - run: brew install opam zstd coreutils
+        if: matrix.os == 'macos'
+      - run: |
+          opam init --color=always --compiler=5.2.0 --disable-sandboxing -y
+          opam option depext-run-installs=false
+          opam install --color=always ocamlfind menhir merlin ocamlformat ppxlib ounit core -y
+          opam env | sed -e "s/ export .*//g" -e "s/'//g" -e "s/\;//g" >> $GITHUB_ENV
+      - run: ./ocaml-setup.sh
+      - run: echo "PATH=$(pwd):$PATH" >> $GITHUB_ENV
+      - uses: haskell-actions/setup@v2
+      - run: buck2 build cat4progs//... -v 2
