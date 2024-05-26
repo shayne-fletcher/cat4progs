@@ -1,0 +1,7 @@
+_SUPPORTED = not host_info().os.is_windows
+
+# buildifier: disable=no-effect
+haskell_binary(
+    name = "main",
+    srcs = ["Main.hs"],
+) if _SUPPORTED else None
