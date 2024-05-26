@@ -1,6 +1,5 @@
 # cat4progs
 ## [dotslash](https://dotslash-cli.com/docs/installation/) + [buck2](https://buck2.build/) + [haskell](https://www.haskell.org/?uwu=true)
-
 - Install [ghcup](https://www.haskell.org/ghcup/install/)
 - Use ghcup to install ghc-9.10.1
 ```bash
