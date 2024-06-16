@@ -1,3 +1,4 @@
 .DS_Store
 buck-out
+third-party/haskell/ghc
 third-party/ocaml/opam

@@ -1,7 +1,18 @@
-_SUPPORTED = not host_info().os.is_windows
+load("//haskell.bzl", "haskell_binary", "haskell_library")
+
+_SUPPORTED = host_info().os.is_linux
+
+# buildifier: disable=no-effect
+haskell_library(
+    name = "library",
+    srcs = ["Library.hs"],
+) if _SUPPORTED else None
 
 # buildifier: disable=no-effect
 haskell_binary(
     name = "main",
     srcs = ["Main.hs"],
+    deps = [
+        ":library",
+    ],
 ) if _SUPPORTED else None
