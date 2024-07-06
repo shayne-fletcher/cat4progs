@@ -10,7 +10,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu]
+        os: [ubuntu, macos]
     steps:
       - uses: actions/checkout@v4
         with:
@@ -21,4 +21,4 @@ jobs:
       - uses: facebook/install-dotslash@latest
       - run: echo "PATH=$(pwd):$PATH" >> $GITHUB_ENV
       - run: ./haskell-setup.sh
-      - run: buck2 run cat4progs//breathing-test:main -v 2
+      - run: buck2 build cat4progs//breathing-test:hello-world-check -v 2
