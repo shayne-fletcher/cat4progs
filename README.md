@@ -1,4 +1,5 @@
 # cat4progs
+[![buck2 build/run](https://github.com/shayne-fletcher/cat4progs/actions/workflows/buck-build-and-test.yml/badge.svg)](https://github.com/shayne-fletcher/cat4progs/actions/workflows/buck-build-and-test.yml)
 ## [dotslash](https://dotslash-cli.com/docs/installation/) + [buck2](https://buck2.build/) + [haskell](https://www.haskell.org/?uwu=true)
 - Install [ghcup](https://www.haskell.org/ghcup/install/)
 - Use ghcup to install ghc-9.10.1
